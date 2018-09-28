@@ -1,0 +1,2610 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    122779,       2600]
+NotebookOptionsPosition[    121294,       2569]
+NotebookOutlinePosition[    121651,       2585]
+CellTagsIndexPosition[    121608,       2582]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tData", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1647.38`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "0"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1646.15`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "1"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1644.71`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "2"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1642.66`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "3"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1644.1`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "4"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1645.12`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "5"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1645.33`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "5"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1644.71`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "6"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1645.53`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "7"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1645.12`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "8"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1643.28`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "9"}]}], "\[RightAssociation]"}],
+      ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.84`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "10"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.02`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "10"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1642.46`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "11"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.41`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "12"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.56`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "13"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1636.51`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "14"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.62`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "15"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.95`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.62`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "15"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.36`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.62`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "16"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.64`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "17"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "18"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.18`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "19"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.41`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "20"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "20"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "21"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "22"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.77`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "23"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "24"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.36`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "24"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.56`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.44`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "25"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.56`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.44`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "26"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.95`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.44`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "27"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.56`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.44`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "28"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.59`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.44`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "29"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.38`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "29"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.41`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.38`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "30"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.38`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.38`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "31"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.59`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.31`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "32"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.31`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "33"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.31`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "34"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.62`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.25`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "34"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1642.66`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.25`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "35"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.74`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.25`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "36"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.41`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.25`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "37"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.56`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.25`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "38"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.25`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "39"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.33`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.25`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "39"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.13`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.25`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "40"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.19`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "41"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.56`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.12`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "42"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.59`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.12`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "43"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.77`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.12`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "43"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.95`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.12`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "44"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.06`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "45"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.79`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.06`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "46"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "47"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.62`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "48"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.62`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "23.`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "48"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.02`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "49"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.64`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "50"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.38`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "51"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "52"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.18`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "53"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.02`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "53"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.62`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "54"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.62`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "55"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.62`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "56"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1642.46`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "57"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.23`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "58"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1642.46`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "58"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1642.25`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "59"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.59`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "60"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.79`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "61"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.64`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "62"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1642.46`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "63"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.26`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1642.25`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "63"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.64`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "64"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.56`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.62`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "65"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.18`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "66"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.64`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "67"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.02`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "68"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1644.1`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "68"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.23`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "69"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.62`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "70"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.5`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "71"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.44`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "72"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.41`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.44`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "73"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.38`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "73"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.62`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.38`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "74"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.82`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.31`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "75"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1639.59`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.25`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "76"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.13`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.25`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "77"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.33`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.12`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "77"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1635.9`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.06`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "78"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1636.92`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "79"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "22.`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "80"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.15`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "81"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.95`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "82"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.13`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "82"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.95`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "83"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "84"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1636.51`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.94`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "85"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1641.43`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "86"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "87"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.95`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "87"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "88"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.13`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.88`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "89"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.81`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "90"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.97`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.81`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "91"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.75`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "92"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "92"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "93"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.77`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.69`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "94"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.62`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "95"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.62`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "96"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "97"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1638.56`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "97"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.95`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "98"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.54`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "99"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1640.2`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "100"}]}], 
+      "\[RightAssociation]"}], ",", 
+     RowBox[{"\[LeftAssociation]", 
+      RowBox[{
+       RowBox[{"\"\<Pascals(in/Hg)\>\"", "\[Rule]", "28.27`"}], ",", 
+       RowBox[{"\"\<Altitude(ft)\>\"", "\[Rule]", "1637.13`"}], ",", 
+       RowBox[{"\"\<Temperature(*C)\>\"", "\[Rule]", "21.56`"}], ",", 
+       RowBox[{"\"\<Time(s)\>\"", "\[Rule]", "101"}]}], 
+      "\[RightAssociation]"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.746982860944922*^9, 
+  3.746982866680686*^9}},ExpressionUUID->"8222d0d6-c074-42ba-b990-\
+be3114f20d7a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tData", "//", "Dataset"}]], "Input",
+ CellChangeTimes->{{3.746982872734264*^9, 
+  3.7469828848191023`*^9}},ExpressionUUID->"9b9a3517-aa51-4d10-ba96-\
+4961890936c9"],
+
+Cell[BoxData[
+ TemplateBox[{TagBox[
+    DynamicModuleBox[{
+     TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
+      Data`UnorderedAssociation[
+       "RowCount" -> 20, "Length" -> 122, "InitialType" -> TypeSystem`Vector[
+          
+          TypeSystem`Struct[{
+           "Pascals(in/Hg)", "Altitude(ft)", "Temperature(*C)", "Time(s)"}, {
+            TypeSystem`Atom[Real], 
+            TypeSystem`Atom[Real], 
+            TypeSystem`Atom[Real], 
+            TypeSystem`Atom[Integer]}], 122], "Shape" -> 
+        TypeSystem`PackageScope`HeaderShape[
+          
+          Association[{All, "Pascals(in/Hg)"} -> 1, {All, "Altitude(ft)"} -> 
+           1, {All, "Temperature(*C)"} -> 1, {All, "Time(s)"} -> 1], 
+          TypeSystem`PackageScope`Limited[
+           TypeSystem`PackageScope`ColumnShape[
+            TypeSystem`PackageScope`RowShape[
+             Association[
+             "Pascals(in/Hg)" -> TypeSystem`PackageScope`AtomShape[60], 
+              "Altitude(ft)" -> TypeSystem`PackageScope`AtomShape[60], 
+              "Temperature(*C)" -> TypeSystem`PackageScope`AtomShape[60], 
+              "Time(s)" -> TypeSystem`PackageScope`AtomShape[34]]]], 20, {}]],
+         "InitialData" -> TypeSystem`PackageScope`CacheHandle[1115524767], 
+        "Type" -> TypeSystem`Vector[
+          
+          TypeSystem`Struct[{
+           "Pascals(in/Hg)", "Altitude(ft)", "Temperature(*C)", "Time(s)"}, {
+            TypeSystem`Atom[Real], 
+            TypeSystem`Atom[Real], 
+            TypeSystem`Atom[Real], 
+            TypeSystem`Atom[Integer]}], 122], "HandleQ" -> True, "RowTarget" -> 
+        20, "Data" -> TypeSystem`PackageScope`CacheHandle[1115524767]], 
+      TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+      TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 1, 
+      TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+      DynamicModule[{
+        TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+           Style[
+            Grid[{{
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"Pascals(in/Hg)\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"Pascals(in/Hg)\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642][{
+                    All, "Pascals(in/Hg)"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[All, "Pascals(in/Hg)"]], "Mouse"], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"Altitude(ft)\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"Altitude(ft)\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642][{
+                    All, "Altitude(ft)"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[All, "Altitude(ft)"]], "Mouse"], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"Temperature(*C)\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"Temperature(*C)\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642][{
+                    All, "Temperature(*C)"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[All, "Temperature(*C)"]], "Mouse"], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox["\"Time(s)\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"Time(s)\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642][{
+                    All, "Time(s)"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[All, "Time(s)"]], "Mouse"], 
+                Background -> GrayLevel[0.95], 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[1, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1647.38"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[1, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.69"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[1, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["0"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[1, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[2, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1646.15"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[2, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.75"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[2, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[2, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[3, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1644.71"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[3, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.69"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[3, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["2"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[3, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[4, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1642.66"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[4, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.75"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[4, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["3"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[4, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[5, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1644.1"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[5, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.75"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[5, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["4"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[5, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[6, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1645.12"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[6, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.75"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[6, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["5"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[6, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[7, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1645.33"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[7, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.75"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[7, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["5"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[7, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[8, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1644.71"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[8, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.75"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[8, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["6"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[8, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[9, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1645.53"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[9, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.75"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[9, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["7"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[9, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[10, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1645.12"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[10, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.75"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[10, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["8"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[10, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[11, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1643.28"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[11, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.75"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[11, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["9"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[11, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.27"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[12, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1641.84"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[12, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.69"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[12, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["10"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[12, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.27"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[13, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1641.02"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[13, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.75"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[13, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["10"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[13, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.26"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[14, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1642.46"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[14, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.69"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[14, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["11"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[14, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.27"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[15, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1640.41"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[15, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.69"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[15, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["12"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[15, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.27"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[16, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1638.56"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[16, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.69"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[16, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["13"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[16, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.27"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[17, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1636.51"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[17, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.69"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[17, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["14"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[17, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.27"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[18, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1638.97"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[18, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.62"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[18, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["15"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[18, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.27"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[19, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1637.95"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[19, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.62"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[19, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["15"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[19, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["28.27"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[20, 
+                   Key["Pascals(in/Hg)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1638.36"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[20, 
+                   Key["Altitude(ft)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["23.62"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[20, 
+                   Key["Temperature(*C)"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["16"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+                 
+                  GeneralUtilities`Slice[20, 
+                   Key["Time(s)"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Item[
+                Deploy[
+                 Mouseover[
+                  Row[{
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    GrayLevel[0.5]]], 
+                    GrayLevel[0.5], {
+                    Thickness[0.023255813953488372`], 
+                    FaceForm[{
+                    RGBColor[0.481, 0.481, 0.481], 
+                    Opacity[1.]}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{0.56, 
+                    1.031}, {6.429, 1.031}, {6.429, 60.967}, {0.56, 
+                    60.967}}}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{6.192899999999999, 
+                    30.980699999999995`}, {42.4399, 0.7526999999999973}, {
+                    42.4399, 8.209699999999994}, {16.432899999999997`, 
+                    30.982699999999994`}, {42.4119, 53.6547}, {42.4399, 
+                    61.244699999999995`}}}]}}, ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]], 
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098], {
+                    Thickness[0.023255813953488372`], 
+                    FaceForm[{
+                    RGBColor[0.481, 0.481, 0.481], 
+                    Opacity[1.]}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{0.56, 
+                    1.031}, {6.429, 1.031}, {6.429, 60.967}, {0.56, 
+                    60.967}}}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{6.192899999999999, 
+                    30.980699999999995`}, {42.4399, 0.7526999999999973}, {
+                    42.4399, 8.209699999999994}, {16.432899999999997`, 
+                    30.982699999999994`}, {42.4119, 53.6547}, {42.4399, 
+                    61.244699999999995`}}}]}}, ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]]], "LinkHand"], {
+                    "MouseClicked" :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$pos$$ + 
+                    122 (-20), {1, 122 - -20 + 1}])}], 
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    GrayLevel[0.3]]], 
+                    GrayLevel[0.3], {
+                    Thickness[0.026431741349551847`], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5499, 30.980699999999995`}, {
+                    36.7969, 0.7526999999999973}, {36.7969, 
+                    8.209699999999994}, {10.7899, 30.982699999999994`}, {
+                    36.7689, 53.6547}, {36.7969, 61.244699999999995`}}}]}}, 
+                    ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]], 
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098], {
+                    Thickness[0.026431741349551847`], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5499, 30.980699999999995`}, {
+                    36.7969, 0.7526999999999973}, {36.7969, 
+                    8.209699999999994}, {10.7899, 30.982699999999994`}, {
+                    36.7689, 53.6547}, {36.7969, 61.244699999999995`}}}]}}, 
+                    ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]]], "LinkHand"], {
+                    "MouseClicked" :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$pos$$ - 20, {
+                    1, 122 - -20 + 1}])}], 
+                    Pane[
+                    Row[{"showing ", 1, "\[Dash]", 20, " of ", 
+                    Style[
+                    122, FontColor -> GrayLevel[0], FontWeight -> "Medium"]}, 
+                    BaseStyle -> {
+                    FontSize -> 8., FontColor -> 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]}], 150, ContentPadding -> False, 
+                    Alignment -> {Center, Center}], 
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    GrayLevel[0.3]]], 
+                    GrayLevel[0.3], {
+                    Thickness[0.026431741349551847`], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5778000000000001, 
+                    53.654399999999995`}, {26.5568, 30.982399999999995`}, {
+                    0.5498000000000001, 8.209399999999995}, {
+                    0.5498000000000001, 0.7523999999999944}, {
+                    36.796800000000005`, 30.980399999999992`}, {
+                    0.5498000000000001, 61.2454}}}]}}, 
+                    ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]], 
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098], {
+                    Thickness[0.026431741349551847`], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5778000000000001, 
+                    53.654399999999995`}, {26.5568, 30.982399999999995`}, {
+                    0.5498000000000001, 8.209399999999995}, {
+                    0.5498000000000001, 0.7523999999999944}, {
+                    36.796800000000005`, 30.980399999999992`}, {
+                    0.5498000000000001, 61.2454}}}]}}, 
+                    ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]]], "LinkHand"], {
+                    "MouseClicked" :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$pos$$ + 20, {
+                    1, 122 - 20 + 1}])}], 
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    GrayLevel[0.5]]], 
+                    GrayLevel[0.5], {
+                    Thickness[0.023255813953488372`], 
+                    FaceForm[{
+                    RGBColor[0.481, 0.481, 0.481], 
+                    Opacity[1.]}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    36.571, 1.031}, {42.440999999999995`, 1.031}, {
+                    42.440999999999995`, 60.967}, {36.571, 60.967}}}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5598000000000001, 
+                    53.788500000000006`}, {26.5668, 31.015500000000007`}, {
+                    0.5878000000000001, 8.343500000000006}, {
+                    0.5598000000000001, 0.7525000000000048}, {36.8068, 
+                    31.017500000000005`}, {0.5598000000000001, 
+                    61.24450000000001}}}]}}, ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]], 
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098], {
+                    Thickness[0.023255813953488372`], 
+                    FaceForm[{
+                    RGBColor[0.481, 0.481, 0.481], 
+                    Opacity[1.]}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    36.571, 1.031}, {42.440999999999995`, 1.031}, {
+                    42.440999999999995`, 60.967}, {36.571, 60.967}}}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5598000000000001, 
+                    53.788500000000006`}, {26.5668, 31.015500000000007`}, {
+                    0.5878000000000001, 8.343500000000006}, {
+                    0.5598000000000001, 0.7525000000000048}, {36.8068, 
+                    31.017500000000005`}, {0.5598000000000001, 
+                    61.24450000000001}}}]}}, ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]]], "LinkHand"], {
+                    "MouseClicked" :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$pos$$ + 
+                    122 20, {1, 122 - 20 + 1}])}]}, "   "], 
+                  Row[{
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    GrayLevel[0.5]]], 
+                    GrayLevel[0.5], {
+                    Thickness[0.023255813953488372`], 
+                    FaceForm[{
+                    RGBColor[0.481, 0.481, 0.481], 
+                    Opacity[1.]}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{0.56, 
+                    1.031}, {6.429, 1.031}, {6.429, 60.967}, {0.56, 
+                    60.967}}}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{6.192899999999999, 
+                    30.980699999999995`}, {42.4399, 0.7526999999999973}, {
+                    42.4399, 8.209699999999994}, {16.432899999999997`, 
+                    30.982699999999994`}, {42.4119, 53.6547}, {42.4399, 
+                    61.244699999999995`}}}]}}, ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]], 
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098], {
+                    Thickness[0.023255813953488372`], 
+                    FaceForm[{
+                    RGBColor[0.481, 0.481, 0.481], 
+                    Opacity[1.]}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{0.56, 
+                    1.031}, {6.429, 1.031}, {6.429, 60.967}, {0.56, 
+                    60.967}}}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{6.192899999999999, 
+                    30.980699999999995`}, {42.4399, 0.7526999999999973}, {
+                    42.4399, 8.209699999999994}, {16.432899999999997`, 
+                    30.982699999999994`}, {42.4119, 53.6547}, {42.4399, 
+                    61.244699999999995`}}}]}}, ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]]], "LinkHand"], {
+                    "MouseClicked" :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$pos$$ + 
+                    122 (-20), {1, 122 - -20 + 1}])}], 
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    GrayLevel[0.3]]], 
+                    GrayLevel[0.3], {
+                    Thickness[0.026431741349551847`], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5499, 30.980699999999995`}, {
+                    36.7969, 0.7526999999999973}, {36.7969, 
+                    8.209699999999994}, {10.7899, 30.982699999999994`}, {
+                    36.7689, 53.6547}, {36.7969, 61.244699999999995`}}}]}}, 
+                    ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]], 
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098], {
+                    Thickness[0.026431741349551847`], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5499, 30.980699999999995`}, {
+                    36.7969, 0.7526999999999973}, {36.7969, 
+                    8.209699999999994}, {10.7899, 30.982699999999994`}, {
+                    36.7689, 53.6547}, {36.7969, 61.244699999999995`}}}]}}, 
+                    ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]]], "LinkHand"], {
+                    "MouseClicked" :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$pos$$ - 20, {
+                    1, 122 - -20 + 1}])}], 
+                    Pane[
+                    Row[{"showing ", 1, "\[Dash]", 20, " of ", 
+                    Style[
+                    122, FontColor -> GrayLevel[0], FontWeight -> "Medium"]}, 
+                    BaseStyle -> {
+                    FontSize -> 8., FontColor -> 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]}], 150, ContentPadding -> False, 
+                    Alignment -> {Center, Center}], 
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    GrayLevel[0.3]]], 
+                    GrayLevel[0.3], {
+                    Thickness[0.026431741349551847`], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5778000000000001, 
+                    53.654399999999995`}, {26.5568, 30.982399999999995`}, {
+                    0.5498000000000001, 8.209399999999995}, {
+                    0.5498000000000001, 0.7523999999999944}, {
+                    36.796800000000005`, 30.980399999999992`}, {
+                    0.5498000000000001, 61.2454}}}]}}, 
+                    ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]], 
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098], {
+                    Thickness[0.026431741349551847`], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5778000000000001, 
+                    53.654399999999995`}, {26.5568, 30.982399999999995`}, {
+                    0.5498000000000001, 8.209399999999995}, {
+                    0.5498000000000001, 0.7523999999999944}, {
+                    36.796800000000005`, 30.980399999999992`}, {
+                    0.5498000000000001, 61.2454}}}]}}, 
+                    ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]]], "LinkHand"], {
+                    "MouseClicked" :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$pos$$ + 20, {
+                    1, 122 - 20 + 1}])}], 
+                    EventHandler[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    GrayLevel[0.5]]], 
+                    GrayLevel[0.5], {
+                    Thickness[0.023255813953488372`], 
+                    FaceForm[{
+                    RGBColor[0.481, 0.481, 0.481], 
+                    Opacity[1.]}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    36.571, 1.031}, {42.440999999999995`, 1.031}, {
+                    42.440999999999995`, 60.967}, {36.571, 60.967}}}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5598000000000001, 
+                    53.788500000000006`}, {26.5668, 31.015500000000007`}, {
+                    0.5878000000000001, 8.343500000000006}, {
+                    0.5598000000000001, 0.7525000000000048}, {36.8068, 
+                    31.017500000000005`}, {0.5598000000000001, 
+                    61.24450000000001}}}]}}, ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]], 
+                    Graphics[{
+                    EdgeForm[
+                    Directive[
+                    Thickness[0.05], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098], {
+                    Thickness[0.023255813953488372`], 
+                    FaceForm[{
+                    RGBColor[0.481, 0.481, 0.481], 
+                    Opacity[1.]}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    36.571, 1.031}, {42.440999999999995`, 1.031}, {
+                    42.440999999999995`, 60.967}, {36.571, 60.967}}}], 
+                    
+                    FilledCurve[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                    0}, {0, 1, 0}}}, {{{0.5598000000000001, 
+                    53.788500000000006`}, {26.5668, 31.015500000000007`}, {
+                    0.5878000000000001, 8.343500000000006}, {
+                    0.5598000000000001, 0.7525000000000048}, {36.8068, 
+                    31.017500000000005`}, {0.5598000000000001, 
+                    61.24450000000001}}}]}}, ImageSize -> {Automatic, 9}, 
+                    ImagePadding -> {{1, 1}, {0, 0}}, BaselinePosition -> 
+                    Scaled[-0.2]]], "LinkHand"], {
+                    "MouseClicked" :> (
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$pos$$ + 
+                    122 20, {1, 122 - 20 + 1}])}]}, "   "]]], Background -> 
+                GrayLevel[0.98], Alignment -> {Left, Top}, 
+                BaseStyle -> {ContextMenu -> {
+                    MenuItem["Hide", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642}, 
+                    1, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 10 rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642}, 
+                    10, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 30 rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642}, 
+                    30, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 100 rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642}, 
+                    100, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show all", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642}, 
+                    100000000, {}]], MenuEvaluator -> Automatic]}}], 
+               SpanFromLeft, SpanFromLeft, SpanFromLeft}}, 
+             BaseStyle -> {ContextMenu -> {
+                 MenuItem["Copy position to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Copy data to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], Delimiter, 
+                 MenuItem["Paste position in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Paste data in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic]}, FontFamily -> "Verdana", 
+               FontSize -> 12}, Alignment -> Left, RowMinHeight -> 1.5, 
+             Dividers -> All, FrameStyle -> GrayLevel[0.85], 
+             BaseStyle -> {FontFamily -> "Verdana", FontSize -> 12}], 
+            LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False,
+             ShowAutoStyles -> False]], 
+         TypeSystem`NestedGrid`PackagePrivate`initialQ = True, 
+         TypeSystem`NestedGrid`PackagePrivate`self = $Failed}, 
+        Dynamic[
+         TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+            Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+            
+            Module[{TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+              TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+              TypeSystem`NestedGrid`PackagePrivate`LookupCacheValue[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$["Data"]]}, 
+             TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = 
+              If[TypeSystem`NestedGrid`PackagePrivate`tmpData$ === 
+                TypeSystem`NestedGrid`PackagePrivate`$NotCached, 
+                TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642][
+                TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+               Not[
+                FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+               TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+               TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+          TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+          TypeSystem`NestedGrid`PackagePrivate`$pos$$; If[
+            FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+            TypeSystem`SparseGrid[
+             TypeSystem`H["(data no longer present)"]], 
+            If[GeneralUtilities`$DebugMode, 
+             Row[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid, "  ", 
+               TypeSystem`NestedGrid`PackagePrivate`formatState[
+               TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$pos$$]}], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid]]], 
+         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$pos$$}], 
+        DynamicModuleValues :> {}], 
+      TypeSystem`NestedGrid`PackagePrivate`$posCell$$, 
+      TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+        TypeSystem`NestedGrid`PackagePrivate`alignBar[
+        TypeSystem`NestedGrid`PackagePrivate`$state$$][
+         TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+          TypeSystem`PackageScope`Pathbar[
+          TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`updateState[
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$grid$$, 468185642]]]], 
+        TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+      TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Framed[
+        Dynamic[
+         Replace[
+          MouseAnnotation[Null], {
+          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][Null] -> 
+           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[468185642][
+             Pattern[TypeSystem`NestedGrid`PackagePrivate`path, 
+              Blank[]]] :> (
+            TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+             TypeSystem`NestedGrid`PackagePrivate`path; 
+            TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+             TypeSystem`NestedGrid`PackagePrivate`path, 
+              TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+           Spacer[10], Blank[] :> Spacer[10]}], TrackedSymbols :> {}], 
+        FrameStyle -> None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> 
+        Top, ImageSize -> {Automatic, 14}]}, 
+     DynamicBox[
+      ToBoxes[
+       Column[
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, {
+          TypeSystem`NestedGrid`PackagePrivate`displayScrollBar[
+          TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$], 
+          TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`alignBar[
+           TypeSystem`NestedGrid`PackagePrivate`$state$$][
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]]}, {
+         TypeSystem`NestedGrid`PackagePrivate`$topBar$$, 
+          TypeSystem`NestedGrid`PackagePrivate`displayScrollBar[
+          TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$], 
+          TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`alignBar[
+           TypeSystem`NestedGrid`PackagePrivate`$state$$][
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]]}], Spacings -> 
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+          0, {{}, {0, 0.05, 0}}]], StandardForm], 
+      ImageSizeCache -> {346., {279.634033203125, 285.365966796875}}, 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     BaseStyle -> {LineBreakWithin -> False}, Deinitialization :> 
+     TypeSystem`NestedGrid`PackagePrivate`deleteState[
+      TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+     DynamicModuleValues :> {}, Initialization :> 
+     Block[{$ContextPath = $ContextPath}, 
+       Needs["TypeSystem`"]]], Deploy, DefaultBaseStyle -> "Deploy"]},
+  "CopyTag",
+  DisplayFunction->(#& ),
+  InterpretationFunction->("Dataset[<>]"& )]], "Output",
+ CellChangeTimes->{{3.7469828743556337`*^9, 
+  3.7469828851261787`*^9}},ExpressionUUID->"db0e5ad8-217f-4662-bf7b-\
+03e3aa3d150e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", 
+  RowBox[{"tData", "[", 
+   RowBox[{"[", 
+    RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.746982892714143*^9, 
+  3.746982898479707*^9}},ExpressionUUID->"f1f177c4-04dd-444c-b5a9-\
+425f079a0a3f"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.01388888888888889], 
+     AbsoluteThickness[1.6], LineBox[CompressedData["
+1:eJxdlDlsU0EQhp+oUCoKFxQoHELIIIS4b5M/p52DxO/5tp9dIJE2pg3NNtSW
+uB1uEkAgESEEyA3SClqoqamhoKFnl81Ymn8la/V5jp35d97uvbKSXN0WRdGq
++/k9rD9jv+PB6I3PfWz9gbW+WwPh7djo5kZ+vBfegWsO198IZ7Ds1zvhnchs
+5n+ufhDeBZf9V/xReA/l2wdnHYx+Et5P8QeC/a1wFr0vf7PpK+FD8O6ZDeHD
+If9r4SOh3mfCR+Gom1sTPgaPIzeFj+O6L+CB8Al8/+bWPeGT8Om6feFT+OrK
+6b0UPh38nwqfwW7fwEPhs1TPOfI/H/YhXyC+GPod1pejei9RfWPULzQbUH/j
+ZB8Pej8W+4Q+z0xQP5P4P0+PxD5J8VO6HzNF9U+H+38u9mmatxkcTF3Gu2Kf
+ofPzVH+e8hfCPN4ReyHUe1vss9TfLOk3p/sxc3Qf81pPM0/nL8CXn30i9gWt
+R3SZ+ieOFvW8m0WavyXSf4nmq6jnEUXKV9TnWeIo1oxYf28mRuIFlnyW7FES
+dmEkpGei9bEJ9VfS+VDS+UxJ+9sS3V+Z+i9rf1PWetgyvW8V3R8qdF8Vrbet
+hH2of1XPK6ra31RJ/ypcNZv5dYmvab1Q0/Nranq+bS285z2Jr6PgE96S+DrN
+ez3435f4Or0PDX0eGjTvDZ3PNuh9bQb9X0h8k/pv6ny2Sd9Pi85vUXyLzm+R
+/qn2B7FJ9fdsU4pva0ab4tt63myb9OuE+Zb3Cx2K7wz7+wfj9kOS
+      
+      "]]}}, {}, {}, {}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 1635.3260000000002`},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 122.}, {1635.9, 1647.38}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{
+  3.746982898927307*^9},ExpressionUUID->"5840154d-e2c5-4c88-95ac-\
+c1b6e873669e"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RateOfChange", "[", "list0_", "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"list", " ", "=", " ", "list0"}], ",", "temp", ",", "result"}], 
+     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"temp", " ", "=", " ", "list"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "temp", "]"}], ">", "1"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"result", "=", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"result", ",", 
+           RowBox[{
+            RowBox[{"temp", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "-", 
+            RowBox[{"temp", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"temp", "=", 
+         RowBox[{"Drop", "[", 
+          RowBox[{"temp", ",", "1"}], "]"}]}], ";"}]}], "\[IndentingNewLine]",
+       "]"}], ";", "\[IndentingNewLine]", "result"}]}], "\[IndentingNewLine]",
+    "]"}]}]], "Input",
+ CellChangeTimes->{{3.7469837545129757`*^9, 3.746983759487598*^9}, {
+  3.746983950953711*^9, 
+  3.746984065454563*^9}},ExpressionUUID->"dc86e38a-ebfc-41e0-b9f4-\
+cc34d41f7a35"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"test", "=", 
+  RowBox[{"{", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"temp", " ", "=", " ", "test"}], "\[IndentingNewLine]", 
+ RowBox[{"result", "=", 
+  RowBox[{"{", "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"result", " ", "=", " ", 
+  RowBox[{"AppendTo", "[", 
+   RowBox[{"result", ",", 
+    RowBox[{
+     RowBox[{"temp", "[", 
+      RowBox[{"[", "1", "]"}], "]"}], "-", 
+     RowBox[{"temp", "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"temp", " ", "=", " ", 
+   RowBox[{"Drop", "[", 
+    RowBox[{"temp", ",", "1"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", "temp", "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.746984069188736*^9, 3.746984073924364*^9}, {
+  3.746984163282063*^9, 3.746984186295949*^9}, {3.7469842429781313`*^9, 
+  3.746984289736971*^9}},ExpressionUUID->"675609f6-7a6e-4a4c-8cee-\
+b7ed5e4692d5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.746984217400838*^9, {3.746984247830595*^9, 
+   3.746984290887965*^9}},ExpressionUUID->"7faaa5ee-efd5-467c-8dda-\
+ec3e8b005363"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.746984217400838*^9, {3.746984247830595*^9, 
+   3.746984290893403*^9}},ExpressionUUID->"91fe3508-1445-4734-8104-\
+5c9b09ceff5a"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{
+  3.746984217400838*^9, {3.746984247830595*^9, 
+   3.7469842908963013`*^9}},ExpressionUUID->"e456dca6-cd3e-4716-841f-\
+a1bba181bdd1"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"-", "1"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.746984217400838*^9, {3.746984247830595*^9, 
+   3.746984290899654*^9}},ExpressionUUID->"815b23e3-0b32-4536-b776-\
+23f376de1f07"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", "3", ",", "4", ",", "5", ",", "6"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.746984217400838*^9, {3.746984247830595*^9, 
+   3.7469842909027233`*^9}},ExpressionUUID->"254d5ba3-0dcf-42af-ac38-\
+76855465932c"]
+}, Open  ]]
+},
+WindowSize->{720, 823},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 43465, 861, 5134, "Input",ExpressionUUID->"8222d0d6-c074-42ba-b990-be3114f20d7a"],
+Cell[CellGroupData[{
+Cell[44048, 885, 188, 4, 30, "Input",ExpressionUUID->"9b9a3517-aa51-4d10-ba96-4961890936c9"],
+Cell[44239, 891, 71124, 1505, 585, "Output",ExpressionUUID->"db0e5ad8-217f-4662-bf7b-03e3aa3d150e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[115400, 2401, 274, 7, 30, "Input",ExpressionUUID->"f1f177c4-04dd-444c-b5a9-425f079a0a3f"],
+Cell[115677, 2410, 2049, 50, 249, "Output",ExpressionUUID->"5840154d-e2c5-4c88-95ac-c1b6e873669e"]
+}, Open  ]],
+Cell[117741, 2463, 1304, 34, 199, "Input",ExpressionUUID->"dc86e38a-ebfc-41e0-b9f4-cc34d41f7a35"],
+Cell[CellGroupData[{
+Cell[119070, 2501, 981, 24, 157, "Input",ExpressionUUID->"675609f6-7a6e-4a4c-8cee-b7ed5e4692d5"],
+Cell[120054, 2527, 268, 7, 34, "Output",ExpressionUUID->"7faaa5ee-efd5-467c-8dda-ec3e8b005363"],
+Cell[120325, 2536, 268, 7, 34, "Output",ExpressionUUID->"91fe3508-1445-4734-8104-5c9b09ceff5a"],
+Cell[120596, 2545, 199, 5, 34, "Output",ExpressionUUID->"e456dca6-cd3e-4716-841f-a1bba181bdd1"],
+Cell[120798, 2552, 220, 6, 34, "Output",ExpressionUUID->"815b23e3-0b32-4536-b776-23f376de1f07"],
+Cell[121021, 2560, 257, 6, 92, "Output",ExpressionUUID->"254d5ba3-0dcf-42af-ac38-76855465932c"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
