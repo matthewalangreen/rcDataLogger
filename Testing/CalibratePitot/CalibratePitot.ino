@@ -99,7 +99,7 @@ void loop() {
         }
         
         digitalWrite(13, LOW);
-        delay(50);
+        delay(200);
       }
       // if the file isn't open, pop up an error:
       else 
