@@ -7,6 +7,7 @@ String fileName;
 const int chipSelect = 4;
 String dataString = "";
 String consoleString = "";
+float calculatedMPH = 0;
 
 void setup() 
 {
@@ -30,7 +31,7 @@ void setup()
 
   File dataFile = SD.open(fileName, FILE_WRITE);
   String tabCharacter = "\t";
-  String header = "Airspeed";
+  String header = "Pressure,Calculated MPH, Input MPH";
   
   // if the file is available, write to it:
   if (dataFile) 
@@ -65,7 +66,10 @@ void loop() {
     int VS = 5; // input voltage
     
     float vOut = VS *(0.2*reading+0.5);
+    calculatedMPH = 0.32*vOut - 280.943 -6;  // inverse of our function: https://www.desmos.com/calculator/aze1yror77
     dataString += vOut;
+    dataString += ",";
+    dataString += String(calculatedMPH);
 
     // flicker onboard LED to show data collected
     digitalWrite(13, HIGH);
