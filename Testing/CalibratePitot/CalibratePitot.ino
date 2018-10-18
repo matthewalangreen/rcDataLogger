@@ -66,7 +66,7 @@ void loop() {
     int VS = 5; // input voltage
     
     float vOut = VS *(0.2*reading+0.5);
-    calculatedMPH = 0.32*vOut - 280.943 -6;  // inverse of our function: https://www.desmos.com/calculator/aze1yror77
+    calculatedMPH = 0.328*vOut - 280.943;  // inverse of our function: https://www.desmos.com/calculator/aze1yror77
     dataString += vOut;
     dataString += ",";
     dataString += String(calculatedMPH);
